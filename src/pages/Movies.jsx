@@ -45,7 +45,7 @@ const Movies = () => {
         const data = await getAllMovies();
         setMovies(data);
       } catch (error) {
-        console.log(error.message);
+        setError(error.message);
         setError("Failed to load movies.");
       } finally {
         setLoading(false);

@@ -1,6 +1,4 @@
 const MovieCard = ({ movie, onSeeDetails }) => {
-  console.log(movie);
-
   const releaseYear = movie.premiered
     ? new Date(movie.premiered).getFullYear()
     : "N/A";

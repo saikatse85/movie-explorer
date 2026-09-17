@@ -7,7 +7,7 @@ export const getAllMovies= async ()=>{
     }
     const data= await response.json()
 
-    console.log(data);
+    // console.log(data);
     return data;
 }
 
@@ -19,6 +19,6 @@ export const searchMovies=async (query)=>{
     }
     const data= await response.json()
 
-    console.log(data);
+    // console.log(data);
     return data.map((item)=> item.show)
 }
