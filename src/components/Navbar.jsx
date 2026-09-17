@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router";
+import NavItem from "./NavItem";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,15 +14,18 @@ const Navbar = () => {
           </Link>
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-            <Link to="/" className="text-slate-300 hover:text-white transition">
+            <NavItem
+              to="/"
+              className="text-slate-300 hover:text-white transition"
+            >
               Home
-            </Link>
-            <Link
+            </NavItem>
+            <NavItem
               to="/movies"
               className="text-slate-300 hover:text-white transition"
             >
               Movies
-            </Link>
+            </NavItem>
             <Link
               to="/movies"
               className="bg-red-600 hover:bg-red-700 px-5 py-2 rounded-full font-semibold transition"
